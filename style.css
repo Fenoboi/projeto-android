@@ -32,11 +32,12 @@ h2#sub-header {
 }
 
 nav {
-  padding: 0px;
+  padding: 0px 8px 0px 8px;
   margin: 0px 0px 0px 0px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 2px;
   align-items: center;
   min-width: 0;
   width: 100%;
@@ -44,10 +45,14 @@ nav {
 }
 
 nav > a {
+  flex: 1 1 0;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-  padding: 4px 8px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(11px, 1.6vw, 16px);
+  padding: clamp(4px, 0.7vw, 6px) 2px;
   display: inline-block;
   margin: 0px;
   filter: drop-shadow(1px 1px 4px #00000065);
@@ -59,23 +64,6 @@ nav > a:hover {
   background-color: #79a584;
   filter: drop-shadow(0px 0px 7px #79a58454);
   transition: max-height 0.3s ease-in-out;
-}
-
-@media (max-width: 400px) {
-  nav {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 2px;
-    padding: 0px 8px 0px 8px;
-  }
-
-  nav > a {
-    flex: 1 1 0;
-    text-align: center;
-    padding: 4px 2px;
-    font-size: 11px;
-    white-space: nowrap;
-  }
 }
 
 a {
