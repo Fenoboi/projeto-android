@@ -38,6 +38,9 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 nav > a {
@@ -56,6 +59,23 @@ nav > a:hover {
   background-color: #79a584;
   filter: drop-shadow(0px 0px 7px #79a58454);
   transition: max-height 0.3s ease-in-out;
+}
+
+@media (max-width: 320px) {
+  nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2px;
+    padding: 0px 8px 0px 8px;
+  }
+
+  nav > a {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 4px 2px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
 }
 
 a {
